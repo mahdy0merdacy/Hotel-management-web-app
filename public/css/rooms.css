@@ -1,0 +1,80 @@
+.room-listing {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .room-listing h1 {
+    font-family: "Cinzel", serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .room-listing p {
+    font-family: "Playfair Display", serif;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+  }
+  
+  .rooms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .room {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .room img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .room h3 {
+    font-family: "Cinzel", serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 1rem;
+  }
+  
+  .room p {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .room .cta-button {
+    margin-top: 1rem;
+    display: inline-block;
+  }
+  
+    /* Réserver Button */
+    .cta-button {
+        display: inline-block;
+        font-family: 'Cinzel', serif;
+        font-size: 1.1rem;
+        color: white;
+        background-color: var(--primary-color);
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 1rem;
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+      
+      .cta-button:hover {
+        background-color: #d89600;
+        transform: scale(1.05);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+      }

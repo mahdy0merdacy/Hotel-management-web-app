@@ -1,0 +1,70 @@
+/* Authentication Section */
+.auth-section {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .auth-section h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-container {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  .form-container h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .form-container label {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .form-container input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .form-container .cta-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-family: 'Cinzel', serif;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .form-container .cta-button:hover {
+    background-color: #d89600;
+    transform: scale(1.05);
+  }
+  
+  .form-container p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+  

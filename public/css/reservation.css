@@ -1,0 +1,93 @@
+/* Reservation Section */
+.reservation-section {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .reservation-section h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .room-type-selector {
+    margin-bottom: 2rem;
+  }
+  
+  .room-type-selector label {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+  
+  .room-type-selector input {
+    margin-right: 0.5rem;
+  }
+  
+  .reservation-forms .reservation-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .reservation-forms .reservation-form label {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .reservation-forms .reservation-form input,
+  .reservation-forms .reservation-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border:  1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .reservation-forms .reservation-form .cta-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-family: 'Cinzel', serif;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .reservation-forms .reservation-form .cta-button:hover {
+    background-color: #d89600;
+    transform: scale(1.05);
+  }
+  
+  /* Hidden forms by default */
+  .presidential-form,
+  .family-form {
+    display: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .reservation-forms .reservation-form {
+      max-width: 90%;
+    }
+  
+    .room-type-selector label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+    
+  

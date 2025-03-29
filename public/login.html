@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page d'authentification pour Hôtel LuxeSéjour. Connectez-vous ou créez un compte pour réserver votre séjour.">
+  <title>Connexion | Inscription - Hôtel LuxeSéjour</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/123.png" alt="Logo de l'hôtel LuxeSéjour">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="chambres.html">Chambres</a></li>
+        <li><a href="reservation.html">Réserver</a></li>
+        <li><a href="about.html">À Propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <section class="auth-section">
+      <h1>Connexion | Inscription</h1>
+
+      <!-- Login Form -->
+      <div class="form-container" id="login-form">
+        <h2>Connexion</h2>
+        <form action="#" method="POST">
+          <label for="login-email">Email :</label>
+          <input type="email" id="login-email" name="email" placeholder="Entrez votre email" required>
+          
+          <label for="login-password">Mot de passe :</label>
+          <input type="password" id="login-password" name="password" placeholder="Entrez votre mot de passe" required>
+          
+          <button type="submit" class="cta-button">Se Connecter</button>
+        </form>
+        <p>Pas de compte ? <a href="#" id="show-signup">S'inscrire</a></p>
+      </div>
+
+      <!-- Sign-Up Form (Hidden by Default) -->
+      <div class="form-container" id="signup-form" style="display: none;">
+        <h2>Inscription</h2>
+        <form action="#" method="POST">
+          <label for="signup-name">Nom :</label>
+          <input type="text" id="signup-name" name="name" placeholder="Entrez votre nom complet" required>
+
+          <label for="signup-email">Email :</label>
+          <input type="email" id="signup-email" name="email" placeholder="Entrez votre email" required>
+
+          <label for="signup-password">Mot de passe :</label>
+          <input type="password" id="signup-password" name="password" placeholder="Choisissez un mot de passe" required>
+          
+          <button type="submit" class="cta-button">S'inscrire</button>
+        </form>
+        <p>Déjà un compte ? <a href="#" id="show-login">Se Connecter</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Hôtel LuxeSéjour. Tous droits réservés.</p>
+    <ul>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const loginForm = document.getElementById('login-form');
+    const signupForm = document.getElementById('signup-form');
+    const showSignup = document.getElementById('show-signup');
+    const showLogin = document.getElementById('show-login');
+
+    showSignup.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginForm.style.display = 'none';
+      signupForm.style.display = 'block';
+    });
+
+    showLogin.addEventListener('click', (e) => {
+      e.preventDefault();
+      signupForm.style.display = 'none';
+      loginForm.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

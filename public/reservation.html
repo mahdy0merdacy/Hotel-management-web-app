@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Réservez votre séjour à l'hôtel LuxeSéjour.">
+  <title>Réserver - Hôtel LuxeSéjour</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/reservation.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/123.png" alt="Logo de l'hôtel LuxeSéjour">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="chambres.html">Chambres</a></li>
+        <li><a href="reservation.html" class="active">Réserver</a></li>
+        <li><a href="about.html">À Propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <section class="reservation-section">
+      <h1>Réservez Votre Séjour</h1>
+
+      <!-- Room Type Selection -->
+      <div class="room-type-selector">
+        <label>
+          <input type="radio" name="room-type" value="deluxe" checked>
+          Chambre Deluxe
+        </label>
+        <label>
+          <input type="radio" name="room-type" value="presidential">
+          Suite Présidentielle
+        </label>
+        <label>
+          <input type="radio" name="room-type" value="family">
+          Chambre Familiale
+        </label>
+      </div>
+
+      <!-- Forms for Each Room -->
+      <div class="reservation-forms">
+        <!-- Deluxe Room Form -->
+        <form action="chambresType/deluxe.html" method="GET" class="reservation-form deluxe-form">
+          <label for="check-in-deluxe">Date d'Arrivée :</label>
+          <input type="date" id="check-in-deluxe" name="check-in" required>
+
+          <label for="check-out-deluxe">Date de Départ :</label>
+          <input type="date" id="check-out-deluxe" name="check-out" required>
+
+          <label for="special-requests-deluxe">Demandes Spéciales :</label>
+          <textarea id="special-requests-deluxe" name="special-requests" rows="4" placeholder="Ecrivez vos demandes ici..."></textarea>
+
+          <button type="submit" class="cta-button">Réserver Chambre Deluxe</button>
+        </form>
+
+        <!-- Presidential Suite Form -->
+        <form action="chambresType/presidential.html" method="GET" class="reservation-form presidential-form" style="display: none;">
+          <label for="check-in-presidential">Date d'Arrivée :</label>
+          <input type="date" id="check-in-presidential" name="check-in" required>
+
+          <label for="check-out-presidential">Date de Départ :</label>
+          <input type="date" id="check-out-presidential" name="check-out" required>
+
+          <label for="special-requests-presidential">Demandes Spéciales :</label>
+          <textarea id="special-requests-presidential" name="special-requests" rows="4" placeholder="Ecrivez vos demandes ici..."></textarea>
+
+          <button type="submit" class="cta-button">Réserver Suite Présidentielle</button>
+        </form>
+
+        <!-- Family Room Form -->
+        <form action="chambresType/family.html" method="GET" class="reservation-form family-form" style="display: none;">
+          <label for="check-in-family">Date d'Arrivée :</label>
+          <input type="date" id="check-in-family" name="check-in" required>
+
+          <label for="check-out-family">Date de Départ :</label>
+          <input type="date" id="check-out-family" name="check-out" required>
+
+          <label for="special-requests-family">Demandes Spéciales :</label>
+          <textarea id="special-requests-family" name="special-requests" rows="4" placeholder="Ecrivez vos demandes ici..."></textarea>
+
+          <button type="submit" class="cta-button">Réserver Chambre Familiale</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Hôtel LuxeSéjour. Tous droits réservés.</p>
+    <ul>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+  </footer>
+</body>
+</html>

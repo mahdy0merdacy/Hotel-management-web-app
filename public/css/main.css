@@ -1,0 +1,156 @@
+:root {
+  --spacing: 1rem;
+  --primary-color: #f4b400;
+  --secondary-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --background-color: #121212;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header */
+header {
+  background-color: var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: var(--spacing) 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing);
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto; /* Push logo to the left side */
+}
+
+.logo img {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing); /* Space between links */
+}
+
+nav ul li a {
+  font-family: "Playfair Display", serif;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Login/Sign-Up Button */
+.auth-links {
+  margin-left: auto; /* Push the button to the far right */
+}
+
+.auth-links .auth-button {
+  font-family: 'Cinzel', serif;
+  color: white;
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-links .auth-button:hover {
+  background-color: #d89600;
+  transform: scale(1.05);
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: var(--spacing) 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing) 0 0 0;
+}
+
+footer ul li {
+  margin: 0 var(--spacing);
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+footer ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+}
