@@ -26,73 +26,55 @@
     </nav>
   </header>
 
-  <!-- Main Section -->
   <main>
     <section class="reservation-section">
-      <h1>Réservez Votre Séjour</h1>
+        <h1>Réservez Votre Séjour</h1>
 
-      <!-- Room Type Selection -->
-      <div class="room-type-selector">
-        <label>
-          <input type="radio" name="room-type" value="deluxe" checked>
-          Chambre Deluxe
-        </label>
-        <label>
-          <input type="radio" name="room-type" value="presidential">
-          Suite Présidentielle
-        </label>
-        <label>
-          <input type="radio" name="room-type" value="family">
-          Chambre Familiale
-        </label>
-      </div>
+        <!-- Room Type Selection -->
+        <div class="room-type-selector">
+            <label>
+                <input type="radio" name="room-type" value="deluxe" checked>
+                Chambre Deluxe
+            </label>
+            <label>
+                <input type="radio" name="room-type" value="presidential">
+                Suite Présidentielle
+            </label>
+            <label>
+                <input type="radio" name="room-type" value="family">
+                Chambre Familiale
+            </label>
+        </div>
 
-      <!-- Forms for Each Room -->
-      <div class="reservation-forms">
-        <!-- Deluxe Room Form -->
-        <form action="chambresType/deluxe.html" method="GET" class="reservation-form deluxe-form">
-          <label for="check-in-deluxe">Date d'Arrivée :</label>
-          <input type="date" id="check-in-deluxe" name="check-in" required>
+        <!-- Unified Reservation Form -->
+        <div class="reservation-forms">
+            <form action="../src/book_room.php" method="POST" class="reservation-form">
+                <input type="hidden" id="selected-room" name="room-type" value="deluxe"> <!-- Hidden input for selected room -->
 
-          <label for="check-out-deluxe">Date de Départ :</label>
-          <input type="date" id="check-out-deluxe" name="check-out" required>
+                <label for="check-in">Date d'Arrivée :</label>
+                <input type="date" id="check-in" name="check-in" required>
 
-          <label for="special-requests-deluxe">Demandes Spéciales :</label>
-          <textarea id="special-requests-deluxe" name="special-requests" rows="4" placeholder="Ecrivez vos demandes ici..."></textarea>
+                <label for="check-out">Date de Départ :</label>
+                <input type="date" id="check-out" name="check-out" required>
 
-          <button type="submit" class="cta-button">Réserver Chambre Deluxe</button>
-        </form>
+                <label for="special-requests">Demandes Spéciales :</label>
+                <textarea id="special-requests" name="special-requests" rows="4" placeholder="Ecrivez vos demandes ici..."></textarea>
 
-        <!-- Presidential Suite Form -->
-        <form action="chambresType/presidential.html" method="GET" class="reservation-form presidential-form" style="display: none;">
-          <label for="check-in-presidential">Date d'Arrivée :</label>
-          <input type="date" id="check-in-presidential" name="check-in" required>
-
-          <label for="check-out-presidential">Date de Départ :</label>
-          <input type="date" id="check-out-presidential" name="check-out" required>
-
-          <label for="special-requests-presidential">Demandes Spéciales :</label>
-          <textarea id="special-requests-presidential" name="special-requests" rows="4" placeholder="Ecrivez vos demandes ici..."></textarea>
-
-          <button type="submit" class="cta-button">Réserver Suite Présidentielle</button>
-        </form>
-
-        <!-- Family Room Form -->
-        <form action="chambresType/family.html" method="GET" class="reservation-form family-form" style="display: none;">
-          <label for="check-in-family">Date d'Arrivée :</label>
-          <input type="date" id="check-in-family" name="check-in" required>
-
-          <label for="check-out-family">Date de Départ :</label>
-          <input type="date" id="check-out-family" name="check-out" required>
-
-          <label for="special-requests-family">Demandes Spéciales :</label>
-          <textarea id="special-requests-family" name="special-requests" rows="4" placeholder="Ecrivez vos demandes ici..."></textarea>
-
-          <button type="submit" class="cta-button">Réserver Chambre Familiale</button>
-        </form>
-      </div>
+                <button type="submit" class="cta-button">Réserver</button>
+            </form>
+        </div>
     </section>
-  </main>
+</main>
+
+<script>
+    // Update the hidden input when a different room type is selected
+    document.querySelectorAll('input[name="room-type"]').forEach((radio) => {
+        radio.addEventListener("change", function () {
+            document.getElementById("selected-room").value = this.value;
+        });
+    });
+</script>
+
 
   <!-- Footer -->
   <footer>
